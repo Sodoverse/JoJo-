@@ -1,0 +1,1149 @@
+
+/* =========================
+   GLOBAL THEME
+========================= */
+
+:root {
+    --bg-dark: #17121f;
+    --bg-deep: #100d18;
+    --bg-purple: #251b35;
+    --purple: #35145c;
+    --purple-light: #8b63b6;
+    --lavender: #e0b5ff;
+    --lavender-border: #c6a0ed;
+    --gold: #f9d76e;
+    --gold-dark: #d9b65d;
+    --text-main: #f8f0ff;
+    --text-muted: #d8c9e8;
+    --shadow: #100b16;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    padding: 60px 20px;
+    background-color: var(--purple);
+    color: var(--gold);
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 5vw, 2.625rem);
+    letter-spacing: clamp(2px, 1vw, 5px);
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0 var(--purple-light);
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 24px;
+    padding: 18px 20px;
+    background-color: var(--bg-purple);
+}
+
+nav a {
+    color: var(--gold);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: white;
+    text-shadow: 0 0 10px var(--gold);
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+main {
+    width: min(100% - 32px, 900px);
+    margin: 30px auto;
+}
+
+section {
+    margin-bottom: 25px;
+    padding: 25px;
+    border: 2px solid var(--lavender-border);
+    border-left: 6px solid var(--gold);
+    border-radius: 8px;
+    background: linear-gradient(
+        135deg,
+        var(--bg-purple),
+        #39234d
+    );
+    box-shadow: 5px 5px 0 var(--shadow);
+}
+
+h2 {
+    color: var(--lavender);
+    line-height: 1.3;
+}
+
+h3 {
+    line-height: 1.4;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 25px 20px;
+    color: #c9b8d9;
+    text-align: center;
+}
+
+/* =========================
+   MUSIC PAGE
+========================= */
+
+.music-page {
+    background: radial-gradient(
+        circle at top,
+        #38205d 0%,
+        var(--bg-dark) 55%,
+        #08070d 100%
+    );
+}
+
+.music-page header {
+    border-bottom: 3px solid var(--gold);
+    background: linear-gradient(
+        135deg,
+        var(--bg-dark),
+        #49236b,
+        var(--bg-dark)
+    );
+}
+
+.music-page header h1 {
+    color: var(--gold);
+    text-shadow:
+        3px 3px 0 var(--purple-light),
+        0 0 18px #a56bff;
+}
+
+.music-page section {
+    border-color: #9b75c9;
+    background: rgb(37 27 53 / 85%);
+}
+
+/* Playlist layout */
+
+.playlist-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+}
+
+.playlist-card {
+    min-width: 0;
+    padding: 20px;
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    background-color: var(--bg-deep);
+    box-shadow: 4px 4px 0 var(--purple-light);
+}
+
+.playlist-card h3 {
+    margin-top: 0;
+    color: var(--gold);
+}
+
+.playlist-card p {
+    color: var(--text-muted);
+}
+
+.playlist-card iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-page {
+    background: linear-gradient(
+        145deg,
+        #21152d,
+        #352044,
+        #130e1b
+    );
+}
+
+.about-page header {
+    border-bottom: 4px solid var(--gold-dark);
+    background-color: #21152d;
+}
+
+.about-page header h1 {
+    color: #f5d98b;
+    text-shadow: 3px 3px 0 #7344a0;
+}
+
+.about-page .profile-card {
+    border: 3px double var(--gold-dark);
+    background: linear-gradient(
+        135deg,
+        #352044,
+        #21152d
+    );
+    box-shadow: 7px 7px 0 var(--shadow);
+}
+
+.about-page .file-label {
+    color: #f5d98b;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+/* Profile name */
+
+.about-page .profile-card h2 {
+    color: #f5d98b;
+    font-size: clamp(2rem, 6vw, 2.625rem);
+    letter-spacing: clamp(3px, 1vw, 8px);
+    text-shadow: 3px 3px 0 #7344a0;
+}
+
+/* Profile image */
+
+.about-page .profile-image {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1;
+    margin: 20px auto;
+    border: 4px solid var(--gold-dark);
+    outline: 2px solid #7344a0;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(115%);
+    box-shadow: 7px 7px 0 var(--shadow);
+}
+
+/* Profile information cards */
+
+.about-page .profile-details {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.about-page .profile-stat {
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid #9b75c9;
+    background-color: #21152d;
+}
+
+.about-page .profile-stat h3 {
+    color: var(--gold-dark);
+    font-size: 14px;
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 600px) {
+    header {
+        padding: 40px 16px;
+    }
+
+    nav {
+        gap: 12px 18px;
+        padding: 16px;
+    }
+
+    main {
+        width: calc(100% - 24px);
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    .about-page .profile-details {
+        grid-template-columns: 1fr;
+    }
+
+    .about-page .file-label {
+        letter-spacing: 2px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+
+/* =========================
+   HOME PAGE — JOJO THEME
+========================= */
+
+.home-page {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #49236b 0%,
+            #21152d 45%,
+            #100b16 100%
+        );
+    min-height: 100vh;
+}
+
+/* Dramatic home header */
+
+.home-page header {
+    position: relative;
+    overflow: hidden;
+    padding: 45px 20px 55px;
+    background: linear-gradient(
+        135deg,
+        #17121f,
+        #35145c,
+        #17121f
+    );
+    border-bottom: 4px solid var(--gold);
+}
+
+/* Main title */
+
+.home-page header h1 {
+    color: var(--gold);
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    letter-spacing: clamp(3px, 1vw, 8px);
+    text-shadow:
+        4px 4px 0 #8b63b6,
+        0 0 20px rgb(249 215 110 / 35%);
+}
+
+/* Subtitle */
+
+.home-page header p {
+    color: #e0b5ff;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+/* Home navigation */
+
+.home-page nav {
+    border-bottom: 2px solid #7344a0;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 30%);
+}
+
+/* Manga-style panels */
+
+.home-page main section {
+    position: relative;
+    overflow-wrap: anywhere;
+    border: 2px solid #c6a0ed;
+    border-left: 7px solid var(--gold);
+    border-radius: 3px;
+    background: linear-gradient(
+        135deg,
+        #30203f,
+        #1b1425
+    );
+    box-shadow: 7px 7px 0 #08070d;
+}
+
+/* Section headings */
+
+.home-page main section h2 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #7344a0;
+    color: var(--gold);
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 #49236b;
+}
+
+/* Home page links */
+
+.home-page main section a {
+    color: #e0b5ff;
+    font-weight: bold;
+    text-underline-offset: 4px;
+}
+
+.home-page main section a:hover,
+.home-page main section a:focus-visible {
+    color: var(--gold);
+}
+
+/* Home banner */
+
+.home-page .home-banner {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: clamp(180px, 35vw, 400px);
+    margin: 0 auto 30px;
+    border: 3px solid var(--gold);
+    outline: 2px solid #7344a0;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 8px 8px 0 #100b16;
+}
+
+/* Footer */
+
+.home-page footer {
+    margin-top: 40px;
+    border-top: 2px solid #49236b;
+    background: #100b16;
+}
+
+/* Smaller screens */
+
+@media (max-width: 600px) {
+    .home-page header {
+        padding: 35px 16px;
+    }
+
+    .home-page header p {
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+    }
+
+    .home-page main section {
+        padding: 18px;
+    }
+
+    .home-page .home-banner {
+        height: 200px;
+    }
+}
+
+
+/* =================================
+   INTERESTS PAGE — CHARACTER ARCHIVE
+================================= */
+
+.interests-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(
+            ellipse at top,
+            #43205e 0%,
+            #21152d 45%,
+            #100b16 100%
+        );
+}
+
+/* Page header */
+
+.interests-page header {
+    background: linear-gradient(
+        135deg,
+        #100b16,
+        #49236b,
+        #21152d
+    );
+    border-bottom: 4px solid #f9d76e;
+}
+
+.interests-page header h1 {
+    color: #f9d76e;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    letter-spacing: clamp(3px, 1vw, 7px);
+    text-shadow:
+        4px 4px 0 #8b63b6,
+        0 0 18px rgb(249 215 110 / 30%);
+}
+
+.interests-page header p {
+    color: #e0b5ff;
+    letter-spacing: 2px;
+}
+
+/* Main content */
+
+.interests-page main {
+    width: min(100% - 32px, 1000px);
+    margin: 35px auto;
+}
+
+/* Intro panel */
+
+.interests-page .interests-intro {
+    border: 2px solid #f9d76e;
+    border-left: 8px solid #f9d76e;
+    border-radius: 3px;
+    background: linear-gradient(
+        135deg,
+        #352044,
+        #17121f
+    );
+    box-shadow: 7px 7px 0 #08070d;
+}
+
+.interests-page .interest-label {
+    color: #f9d76e;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.interests-page .interests-intro h2 {
+    color: #f9d76e;
+    letter-spacing: 2px;
+}
+
+/* Category panels */
+
+.interests-page .interest-category {
+    border: 2px solid #8b63b6;
+    border-left: 7px solid #f9d76e;
+    border-radius: 3px;
+    background: rgb(37 27 53 / 90%);
+    box-shadow: 7px 7px 0 #08070d;
+}
+
+.interests-page .interest-category > h2 {
+    padding-bottom: 12px;
+    border-bottom: 2px solid #7344a0;
+    color: #f9d76e;
+    letter-spacing: 2px;
+}
+
+/* Interest card grid */
+
+.interests-page .interest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Individual cards */
+
+.interests-page .interest-card {
+    min-width: 0;
+    padding: 20px;
+    border: 2px solid #7344a0;
+    border-radius: 3px;
+    background: linear-gradient(
+        145deg,
+        #30203f,
+        #17121f
+    );
+    box-shadow: 4px 4px 0 #100b16;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.interests-page .interest-card h3 {
+    margin-top: 0;
+    color: #f9d76e;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.interests-page .interest-card p {
+    margin-bottom: 0;
+    color: #e0d3ec;
+    line-height: 1.7;
+}
+
+/* Small hover effect */
+
+@media (hover: hover) {
+    .interests-page .interest-card:hover {
+        transform: translateY(-4px);
+        border-color: #f9d76e;
+        box-shadow: 6px 6px 0 #8b63b6;
+    }
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+    .interests-page main {
+        width: calc(100% - 24px);
+        margin: 25px auto;
+    }
+
+    .interests-page .interest-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .interests-page .interest-card {
+        padding: 16px;
+    }
+
+    .interests-page header p {
+        letter-spacing: 1px;
+    }
+}
+
+/* Reduced motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .interests-page .interest-card {
+        transition: none;
+    }
+}
+
+/* ==========================================
+   JOJO'S BIZARRE ADVENTURE — FINAL POLISH
+   Dramatic manga panels, Stand auras & gold
+========================================== */
+
+/* ---------- GLOBAL ATMOSPHERE ---------- */
+
+:root {
+    --jojo-gold: #ffe28a;
+    --jojo-gold-bright: #fff0b5;
+    --jojo-purple: #a56bff;
+    --jojo-deep-purple: #21102f;
+    --jojo-pink: #ff78c8;
+    --jojo-cyan: #83eaff;
+    --jojo-outline: #090610;
+    --jojo-panel: #21172e;
+}
+
+/* Give the pages a more cinematic atmosphere */
+
+body {
+    background-attachment: fixed;
+    text-rendering: optimizeLegibility;
+}
+
+::selection {
+    color: var(--jojo-outline);
+    background: var(--jojo-gold);
+}
+
+/* ---------- DRAMATIC HEADINGS ---------- */
+
+h1,
+h2,
+h3 {
+    overflow-wrap: anywhere;
+}
+
+h1 {
+    text-wrap: balance;
+}
+
+h2 {
+    padding-bottom: 8px;
+    text-shadow: 2px 2px 0 #49236b;
+}
+
+h3 {
+    color: var(--jojo-gold);
+}
+
+/* ---------- JOJO TITLE AURA ---------- */
+
+.home-page header,
+.about-page header,
+.music-page header,
+.interests-page header {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+/* Glowing aura behind the title */
+
+.home-page header::before,
+.about-page header::before,
+.music-page header::before,
+.interests-page header::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -50%;
+    pointer-events: none;
+
+    background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        rgb(165 107 255 / 18%) 70deg,
+        transparent 130deg,
+        rgb(249 215 110 / 15%) 200deg,
+        transparent 270deg,
+        rgb(255 120 200 / 12%) 320deg,
+        transparent 360deg
+    );
+
+    animation: stand-aura 18s linear infinite;
+}
+
+/* Make the main title feel like a manga cover */
+
+.home-page header h1,
+.about-page header h1,
+.music-page header h1,
+.interests-page header h1 {
+    position: relative;
+    color: var(--jojo-gold-bright);
+    -webkit-text-stroke: 0.5px #8a5b20;
+    text-shadow:
+        2px 2px 0 #8b63b6,
+        4px 4px 0 #160d20,
+        0 0 12px rgb(255 226 138 / 45%),
+        0 0 28px rgb(165 107 255 / 30%);
+}
+
+/* ---------- MANGA-STYLE NAVIGATION ---------- */
+
+nav {
+    position: relative;
+    border-top: 1px solid rgb(255 226 138 / 25%);
+    border-bottom: 2px solid var(--jojo-purple);
+}
+
+nav a {
+    position: relative;
+    padding: 7px 3px;
+    letter-spacing: 0.5px;
+    transition:
+        color 0.2s ease,
+        text-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    left: 50%;
+    height: 2px;
+    background: var(--jojo-gold);
+    box-shadow: 0 0 8px var(--jojo-gold);
+    transition: left 0.2s ease, right 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: white;
+    text-shadow:
+        0 0 8px var(--jojo-gold),
+        0 0 18px var(--jojo-purple);
+    transform: translateY(-2px);
+}
+
+nav a:hover::after,
+nav a:focus-visible::after {
+    right: 0;
+    left: 0;
+}
+
+/* ---------- ANGULAR MANGA PANELS ---------- */
+
+section {
+    position: relative;
+    isolation: isolate;
+    border-radius: 3px;
+    box-shadow:
+        5px 5px 0 var(--jojo-outline),
+        0 0 14px rgb(165 107 255 / 8%);
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Small decorative corner marks */
+
+.home-page main section,
+.about-page main section,
+.music-page main section,
+.interests-page main section {
+    background-image:
+        linear-gradient(
+            135deg,
+            rgb(165 107 255 / 7%),
+            transparent 45%
+        ),
+        linear-gradient(
+            315deg,
+            rgb(255 226 138 / 4%),
+            transparent 40%
+        );
+}
+
+/* Gold divider treatment for headings */
+
+.home-page main section h2,
+.interests-page main section h2 {
+    text-shadow:
+        2px 2px 0 #49236b,
+        0 0 12px rgb(255 226 138 / 12%);
+}
+
+/* ---------- INTEREST CARDS: STAND ARCHIVE ---------- */
+
+.interests-page .interest-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border: 2px solid #7344a0;
+    background:
+        linear-gradient(
+            145deg,
+            rgb(165 107 255 / 10%),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            #30203f,
+            #17121f
+        );
+    box-shadow:
+        4px 4px 0 var(--jojo-outline),
+        inset 0 0 16px rgb(165 107 255 / 4%);
+}
+
+/* Diagonal manga shine */
+
+.interests-page .interest-card::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -130%;
+    width: 70%;
+    height: 100%;
+    pointer-events: none;
+
+    background: linear-gradient(
+        110deg,
+        transparent,
+        rgb(255 255 255 / 7%),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+    transition: left 0.5s ease;
+}
+
+.interests-page .interest-card h3 {
+    text-shadow: 1px 1px 0 #5b347e;
+}
+
+@media (hover: hover) {
+    .interests-page .interest-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--jojo-gold);
+        box-shadow:
+            5px 5px 0 var(--jojo-purple),
+            0 0 16px rgb(165 107 255 / 20%);
+    }
+
+    .interests-page .interest-card:hover::before {
+        left: 150%;
+    }
+}
+
+/* ---------- ABOUT PAGE: CHARACTER DOSSIER ---------- */
+
+.about-page .profile-card {
+    position: relative;
+    border: 3px double var(--jojo-gold);
+    box-shadow:
+        7px 7px 0 var(--jojo-outline),
+        0 0 18px rgb(165 107 255 / 12%);
+}
+
+.about-page .profile-stat {
+    border-color: #7344a0;
+    box-shadow: inset 3px 0 0 var(--jojo-gold);
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.about-page .profile-stat h3 {
+    color: var(--jojo-gold);
+    letter-spacing: 1px;
+}
+
+/* Profile image gets a printed manga effect */
+
+.about-page .profile-image {
+    border-color: var(--jojo-gold);
+    outline-color: var(--jojo-purple);
+    box-shadow:
+        6px 6px 0 var(--jojo-outline),
+        0 0 18px rgb(165 107 255 / 15%);
+    transition:
+        filter 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+@media (hover: hover) {
+    .about-page .profile-image:hover {
+        filter: grayscale(55%) contrast(120%);
+        box-shadow:
+            6px 6px 0 var(--jojo-purple),
+            0 0 20px rgb(165 107 255 / 25%);
+    }
+
+    .about-page .profile-stat:hover {
+        border-color: var(--jojo-gold);
+        background-color: #30203f;
+    }
+}
+
+/* ---------- MUSIC PAGE: GOLD RECORDS ---------- */
+
+.music-page .playlist-card {
+    position: relative;
+    border-color: var(--jojo-gold);
+    border-radius: 4px;
+    background:
+        linear-gradient(
+            145deg,
+            rgb(165 107 255 / 8%),
+            transparent 60%
+        ),
+        var(--bg-deep);
+    box-shadow:
+        4px 4px 0 var(--jojo-purple),
+        inset 0 0 15px rgb(249 215 110 / 3%);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.music-page .playlist-card h3 {
+    text-shadow: 1px 1px 0 #7344a0;
+}
+
+@media (hover: hover) {
+    .music-page .playlist-card:hover {
+        transform: translateY(-3px);
+        box-shadow:
+            5px 5px 0 var(--jojo-gold),
+            0 0 16px rgb(165 107 255 / 15%);
+    }
+}
+
+/* ---------- HOME PAGE: HERO IMAGE ---------- */
+
+.home-page .home-banner {
+    position: relative;
+    border-color: var(--jojo-gold);
+    box-shadow:
+        8px 8px 0 var(--jojo-outline),
+        0 0 22px rgb(165 107 255 / 20%);
+    transition:
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+@media (hover: hover) {
+    .home-page .home-banner:hover {
+        border-color: var(--jojo-gold-bright);
+        box-shadow:
+            8px 8px 0 var(--jojo-purple),
+            0 0 28px rgb(165 107 255 / 30%);
+    }
+}
+
+/* ---------- ACCESSIBILITY ---------- */
+
+/* Keep keyboard navigation easy to see */
+
+a:focus-visible,
+button:focus-visible,
+iframe:focus-visible {
+    outline: 3px solid var(--jojo-gold-bright);
+    outline-offset: 4px;
+}
+
+/* Respect users who prefer less motion */
+
+@keyframes stand-aura {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-page header::before,
+    .about-page header::before,
+    .music-page header::before,
+    .interests-page header::before {
+        animation: none;
+    }
+
+    nav a,
+    nav a::after,
+    section,
+    .interests-page .interest-card,
+    .interests-page .interest-card::before,
+    .about-page .profile-image,
+    .about-page .profile-stat,
+    .music-page .playlist-card,
+    .home-page .home-banner {
+        transition: none;
+    }
+
+    .home-page .home-banner:hover,
+    .music-page .playlist-card:hover,
+    .interests-page .interest-card:hover,
+    .about-page .profile-image:hover {
+        transform: none;
+    }
+}
+
+/* SOCIAL LINKS — VERTICAL LIST */
+
+.socials-page .social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Individual link panels */
+
+.socials-page .social-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    width: 100%;
+    min-height: 75px;
+    padding: 20px 24px;
+
+    border: 2px solid var(--purple-light);
+    border-left: 5px solid var(--gold);
+    background: linear-gradient(135deg, #30203f, #17121f);
+    color: var(--gold);
+
+    text-decoration: none;
+    overflow-wrap: anywhere;
+
+    box-shadow: 4px 4px 0 #08070d;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Platform name */
+
+.socials-page .social-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Username or description */
+
+.socials-page .social-detail {
+    color: var(--lavender);
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+/* Hover effect */
+
+.socials-page .social-button:hover,
+.socials-page .social-button:focus-visible {
+    transform: translateX(5px);
+    border-color: var(--gold);
+    color: white;
+    box-shadow: 5px 5px 0 #8b63b6;
+}
+
+/* Mobile layout */
+
+@media (max-width: 480px) {
+    .socials-page .social-button {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        padding: 18px;
+    }
+
+    .socials-page .social-detail {
+        text-align: left;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .socials-page .social-button {
+        transition: none;
+    }
+
+    .socials-page .social-button:hover {
+        transform: none;
+    }
+}
